@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+  color: hsl(228, 12%, 48%);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.desktop {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 375px;
+  height: auto;
+  border-radius: 15px;
+  margin: 15px auto 5px auto;
+  background-color: hsl(0, 0%, 100%);
+}
+.wrapper .mobile {
+  width: 100%;
+  max-width: 375px;
+  border-radius: 15px 15px 0 0;
+}
+.wrapper .desc {
+  margin: 15px 25px;
+}
+.wrapper h1 {
+  font-family: "Fraunces", serif;
+  color: #000;
+  text-align: left;
+  font-size: 34px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+.wrapper h2 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.wrapper p {
+  line-height: 24px;
+}
+.wrapper .prices {
+  margin: 20px 0 10px 0;
+}
+.wrapper .prices .price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 28px;
+  display: inline;
+  text-align: left;
+}
+.wrapper .prices .price + p {
+  padding-left: 10px;
+  display: inline;
+  text-decoration: line-through;
+}
+.wrapper button {
+  cursor: pointer;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  margin: 5px 0 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+.wrapper button:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+.attribution {
+  width: 70%;
+  min-height: auto;
+  margin: 5px auto;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(158, 36%, 37%);
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 575px) {
+  .mobile {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+  }
+  .wrapper {
+    max-width: 600px;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 15px;
+  }
+  .wrapper .inner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .wrapper h2 {
+    padding: 15px 0px;
+  }
+  .wrapper .desktop {
+    display: flex;
+    max-height: 450px;
+    border-radius: 15px 0 0 15px;
+  }
+  .wrapper button {
+    margin: 15px 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
