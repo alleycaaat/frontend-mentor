@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screen capture with a black background and a box in the center asking user's to rate the service on a scale of one through five](./images/screenshot.png)
 
 ### Links
 
