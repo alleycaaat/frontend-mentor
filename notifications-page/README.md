@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screen capture of a social media notifications page with three unread messages and several read messages](./assets/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/alleycaaat/frontend-mentor/tree/main/notifications-page)
+- Live Site URL: [Add live site URL here](https://achulslander-notifications-page.netlify.app/)
 
 ## My process
 
