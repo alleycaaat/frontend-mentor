@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-[Screenshot](./assets/images/screenshot.png)
+![Screen capture of a white background, a blue box is centered and displays the results of a ficticious exam](./assets/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Github](https://github.com/alleycaaat/frontend-mentor/tree/main/results-summary)
+- Solution URL: [GitHub](https://github.com/alleycaaat/frontend-mentor/tree/main/results-summary)
 - Live Site URL: [Netlify](https://achulslander-results-summary.netlify.app)
 
 ### My process
