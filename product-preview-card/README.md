@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-[Screenshot](./images/screenshot.png)
+![Screenshot of a cream background with a photo of a perfume bottle next to a description of the perfume, the price and a button to add it to your cart](./images/screenshot.png)
 
 
 ### Links
