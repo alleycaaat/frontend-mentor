@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32"
+			href="./images/favicon-32x32.png">
+
+		<title>Frontend Mentor | Interactive rating component</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href='https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'
+			rel='stylesheet'>
+
+		<link rel='stylesheet' href='./styles.css'>
+		<script src='script.js' defer></script>
+	</head>
+	<body>
+		<main>
+			<section id='rating' class='wrapper'>
+				<span class='sr-only'>Small orange star in a dark blue circle</span>
+				<span aria-hidden='true'>
+					<svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1
+							.427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0
+							1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0
+							1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1
+							.661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387
+							0Z" fill="#FC7614"/>
+						</svg>
+					</span>
+
+					<h1>How did we do?</h1>
+					<p>
+						Please let us know how we did with your support request. All feedback is
+						appreciated to help us improve our offering!
+					</p>
+					<form action='#' target='_self'>
+						<label>
+							<input type='radio' name='rating' value='1'><span>1</span>
+						</label>
+						<label>
+							<input type='radio' name='rating' value='2'><span>2</span>
+						</label>
+						<label>
+							<input type='radio' name='rating' value='3'><span>3</span>
+						</label>
+						<label>
+							<input type='radio' name='rating' value='4'><span>4</span>
+						</label>
+						<label>
+							<input type='radio' name='rating' value='5' checked='checked'><span>5</span>
+						</label>
+					</form>
+
+					<button type='button'>Submit</button>
+
+				</section>
+
+				<section id='thank-you' class='wrapper hidden'>
+					<img src='./images/illustration-thank-you.svg' alt='blocky cell phone icon
+						with a receipt on top of the screen and an orange credit card next to the
+						phone'>
+					<p class='final-rating'></p>
+					<h1>Thank you!</h1>
+					<p>
+						We appreciate you taking the time to give a rating. If you ever need more
+						support, don't hesitate to get in touch!
+					</p>
+				</section>
+
+				<div class='attribution'>
+					Challenge by <a href='https://www.frontendmentor.io?ref=challenge'
+						target='_blank'>Frontend Mentor</a>.
+					Coded by <a href='https://achulslander.com/' target='_blank'>AC Hulslander</a>.
+				</div>
+			</main>
+		</body>
+	</html>
