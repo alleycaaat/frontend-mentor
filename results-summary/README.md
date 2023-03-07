@@ -53,7 +53,7 @@ Look at the example, remember I can have a hard time distinguishing colors.  Ope
 
 - Website - [AC Hulslander](https://www.achulslander.com/)
 - Frontend Mentor - [@alleycaaat](https://www.frontendmentor.io/profile/alleycaaat)
-- Github - [@alleycaaat](https://github.com/alleycaaat/)
+- GitHub - [@alleycaaat](https://github.com/alleycaaat/)
 - codepen - [@alleycaaat](https://codepen.io/alleycaaat)
 - Blog - [@alleycaaat](https://blog-achulslander.com/)
 - Twitter - [@alleycaaat](https://www.twitter.com/alleycaaat)
