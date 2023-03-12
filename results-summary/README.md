@@ -55,9 +55,10 @@ Look at the example, remember I can have a hard time distinguishing colors.  Ope
 - Frontend Mentor - [@alleycaaat](https://www.frontendmentor.io/profile/alleycaaat)
 - GitHub - [@alleycaaat](https://github.com/alleycaaat/)
 - codepen - [@alleycaaat](https://codepen.io/alleycaaat)
-- Blog - [@alleycaaat](https://blog-achulslander.com/)
+- Hashnode - [@alleycaaat](https://hashnode.com/@alleycaaat)
+- Discord - [alleycaaat#0802](https://discordapp.com/users/427569685366833174)
 - Twitter - [@alleycaaat](https://www.twitter.com/alleycaaat)
-
+- Blog - [blog.achulslander.com](https://blog.achulslander.com/)
 
 ## Acknowledgments
 
