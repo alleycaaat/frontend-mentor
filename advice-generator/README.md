@@ -49,5 +49,5 @@ Users should be able to:
 - codepen - [@alleycaaat](https://codepen.io/alleycaaat)
 - Hashnode - [@alleycaaat](https://hashnode.com/@alleycaaat)
 - Discord - [alleycaaat#0802](https://discordapp.com/users/427569685366833174)
-- Twitter - [@alleycaaat](https://www.twitter.com/alleycaaat)
+- Twitter - [@achulslander](https://www.twitter.com/achulslander)
 - Blog - [blog.achulslander.com](https://blog.achulslander.com/)
