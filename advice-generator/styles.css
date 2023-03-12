@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(218, 23%, 16%);
+}
+
+.wrapper {
+  background-color: hsl(217, 19%, 24%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 35rem;
+  min-height: 35rem;
+  max-width: 47rem;
+  border-radius: 15px;
+  padding: 2.6rem;
+  color: hsl(193, 38%, 86%);
+}
+.wrapper .peas {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper p {
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 15px;
+}
+.wrapper h1 {
+  color: hsl(193, 38%, 86%);
+  font-size: 2.8rem;
+  text-align: center;
+}
+.wrapper h1::before, .wrapper h1::after {
+  content: '"';
+}
+.wrapper h1 + img {
+  width: 100%;
+  margin: auto 0 25px 0;
+  bottom: 15px;
+}
+
+button {
+  cursor: pointer;
+  margin: -30px auto 0 auto;
+  border: none;
+  background-color: hsl(150, 100%, 66%);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.7s ease-out;
+}
+button:hover {
+  box-shadow: 0 0 15px hsl(150, 100%, 66%);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+  color: hsl(193, 38%, 86%);
+}
+.attribution a {
+  color: hsl(150, 100%, 66%);
+  text-decoration: none;
+  font-weight: 800;
+}
+.attribution a:hover {
+  font-style: italic;
+}/*# sourceMappingURL=styles.css.map */
