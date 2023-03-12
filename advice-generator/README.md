@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![a screen capture of an app that generates short pieces of advice upon clicking a button](./screenshot.png)
+![a screen capture of an app that generates short pieces of advice upon clicking a button](./images/screenshot.png)
 
 ### Links
 
