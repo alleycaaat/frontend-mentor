@@ -61,6 +61,7 @@ const groupUpper = (group, lowerDiv) => {
     h2.innerText = group.title;
 
     img.setAttribute('src', './images/icon-ellipsis.svg');
+    img.setAttribute('alt', 'ellipsis icon');
     grouping.classList.add('uppergrouping');
 
     grouping.appendChild(h2);
