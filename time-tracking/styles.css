@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(226, 43%, 10%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 27rem;
+}
+.profile img {
+  height: 55px;
+  width: 55px;
+  border: 3px solid white;
+  border-radius: 100%;
+  margin: 10px 0;
+}
+.profile .profile_upper,
+.profile .profile_lower {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-radius: 15px;
+}
+.profile .profile_upper {
+  justify-content: space-around;
+  padding: 15px;
+  background-color: hsl(246, 80%, 60%);
+  color: hsl(236, 100%, 87%);
+  z-index: 101;
+}
+.profile .profile_upper p {
+  font-size: 1.4rem;
+}
+.profile .profile_upper h1 {
+  font-size: 2.3rem;
+  font-weight: 300;
+  color: white;
+}
+.profile .profile_lower {
+  z-index: 100;
+  justify-content: space-between;
+  align-items: end;
+  background-color: hsl(235, 46%, 20%);
+  margin: -2.8rem 0 0 0;
+  padding: 2.5rem;
+  padding-bottom: 15px;
+  min-height: 8rem;
+}
+.profile .profile_lower button {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: hsl(235, 45%, 61%);
+  font-size: 1.6rem;
+}
+.profile .profile_lower button:hover {
+  color: white;
+}
+.profile .profile_lower .selected {
+  color: white;
+}
+
+.card {
+  margin: 2.3rem auto;
+  cursor: pointer;
+  width: 27rem;
+}
+.card .card_upper {
+  position: relative;
+  z-index: 90;
+  border-radius: 15px 15px 0 0;
+  height: 6.5rem;
+  margin: 0 0 -2.8rem 0;
+  display: flex;
+  overflow: hidden;
+}
+.card .card_lower {
+  position: relative;
+  z-index: 91;
+  color: hsl(236, 100%, 87%);
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+  width: 100%;
+}
+.card .card_lower:hover {
+  background-color: hsl(235, 45%, 35%);
+}
+.card .card_lower div {
+  padding: 1.9rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .card_lower .uppergrouping {
+  padding-bottom: 0;
+}
+.card .card_lower .uppergrouping svg {
+  height: 0.4rem;
+}
+.card .card_lower .lowergrouping {
+  padding-top: 0.5rem;
+  border-radius: 0 0 15px 15px;
+}
+.card .card_lower h2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.card .card_lower h3 {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.card .card_lower h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+footer {
+  color: hsl(246, 80%, 60%);
+  text-align: center;
+  margin-bottom: 35px;
+}
+footer a {
+  color: hsl(145, 58%, 55%);
+  text-decoration: none;
+}
+footer a:hover {
+  font-style: italic;
+}
+
+@media screen and (min-width: 930px) {
+  main {
+    flex-direction: row;
+    align-items: stretch;
+    margin: auto 15px;
+    max-width: 900px;
+  }
+  .section_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    max-height: 37rem;
+  }
+  .profile {
+    margin-right: 1.5rem;
+  }
+  .profile .profile_upper,
+  .profile .profile_lower {
+    flex-direction: column;
+    align-items: start;
+  }
+  .profile .profile_upper {
+    height: 28rem;
+    width: 21rem;
+    justify-content: flex-start;
+    padding-left: 1.8rem;
+  }
+  .profile .profile_upper div {
+    padding-top: 2.6rem;
+  }
+  .profile .profile_upper h1 {
+    font-size: 3.3rem;
+  }
+  .profile .profile_lower {
+    width: 21rem;
+  }
+  .profile .profile_lower button {
+    margin: 0.8rem 0;
+  }
+  .profile .profile_lower button:first-of-type {
+    padding-top: 1.2rem;
+  }
+  .card {
+    margin-top: 0;
+    width: 21rem;
+  }
+  .card div.lowergrouping {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  .card div.lowergrouping h3 {
+    font-size: 3.6rem;
+    margin-top: 1.6rem;
+  }
+  .card div.lowergrouping h4 {
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
