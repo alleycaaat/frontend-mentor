@@ -5,13 +5,13 @@ const Card = ({ data, handleFilter }) => {
     const arr = [data.role, data.level, ...data.languages, ...data.tools];
 
     return (
-        <article className={`${ data.featured ? 'featured' : '' }`}>
+        <div className={`${ data.featured ? 'featured posting' : 'posting' }`}>
             <img src={data.logo} alt={`${ data.company } logo`} />
 
             <div className='container'>
 
                 <div className='heading'>
-                    <span className='company'>{data.company}</span>
+                    <h2 className='company'>{data.company}</h2>
                     <div className='alerts'>
                         {data.new && <p>New!</p>}
                         {data.featured && <p>Featured</p>}
@@ -33,7 +33,7 @@ const Card = ({ data, handleFilter }) => {
                     />
                 ))}
             </div>
-        </article>
+        </div>
     );
 };
 
