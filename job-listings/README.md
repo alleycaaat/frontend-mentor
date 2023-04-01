@@ -23,9 +23,9 @@ Users should be able to:
 
 ### Screenshot
 
-[Screenshot](./src/assets/screenshot.png)
+![Screenshot](./src/assets/screenshot.png)
 
-### Links8
+### Links
 
 - Solution URL: [Github](https://github.com/alleycaaat/frontend-mentor/tree/main/job-listings)
 - Live Site URL: [Netlify](https://achulslander-job-listings.netlify.app/)
