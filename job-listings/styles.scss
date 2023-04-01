@@ -116,7 +116,7 @@ li>img {
         height: 100%;
         margin-left: calc(100vw - 100%);
     }
-    article,
+    .posting,
     .heading,
     .alerts,
     .desc {
@@ -128,7 +128,7 @@ li>img {
     .desc {
         flex-direction: row;
     }
-    article {
+    .posting {
         width: 80vw;
         max-width: 550px;
         justify-content: center;
@@ -228,7 +228,7 @@ footer {
 }
 @media screen and (min-width: 750px) {
     .wrapper {
-        article {
+        .posting {
             flex-direction: row;
             max-width: 900px;
             .container {
