@@ -1,0 +1,188 @@
+$modBlue: hsl(238, 40%, 52%);
+$red: hsl(358, 79%, 66%);
+$lightGreyBlue: hsl(239, 57%, 85%);
+$lightRed: hsl(357, 100%, 86%);
+$darkBlue: hsl(212, 24%, 26%);
+$greyblue: hsl(211, 10%, 45%);
+$lightGrey: hsl(223, 19%, 93%);
+$vLightGrey: hsl(228, 33%, 97%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+//all clickables
+.scoreBtn,
+.replyBtn,
+.replyingTo,
+.delete,
+.edit,
+button {
+    cursor: pointer;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: $vLightGrey;
+}
+.commentSection,
+.comment,
+.add-comment {
+    display: flex;
+    flex-direction: column;
+}
+//wrappers
+.comment,
+.reply,
+.add-comment {
+    background-color: $white;
+    padding: 13px;
+    border-radius: 5px;
+    margin: 15px;
+    .info {
+        align-items: center;
+        margin-bottom: 10px;
+        p {
+            margin: 0 10px;
+        }
+        //target username
+        :nth-child(2) {
+            font-weight: 700;
+        }
+        //target createdAt
+        :last-of-type {
+            color: $greyblue;
+        }
+    }
+    .commentTxt {
+        margin: 5px 0 15px;
+        color: $greyblue;
+    }
+}
+//wraps replies
+.replies {
+    border-left: 1px solid $greyblue;
+    padding-left: 20px;
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    //individual reply
+    .reply {
+        margin: 0 0 30px 0;
+    }
+    .reply:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.info,
+.buttons,
+.score,
+.replyTxt {
+    display: flex;
+    flex-direction: row;
+    //wraps score and buttons
+    .score {
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: $vLightGrey;
+        padding: 5px;
+        color: $modBlue;
+    }
+    //'you'
+    .OpieBtn {
+        border: none;
+        background-color: $modBlue;
+        color: $white;
+        padding: 1px 7px 2px 7px;
+        border-radius: 5px;
+    }
+    //buttons
+    .scoreBtn,
+    .edit,
+    .delete {
+        padding: 5px;
+        border: none;
+        margin: 5px;
+        //TODO vertically center the minus svg
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .replyBtn {
+        padding: 7px;
+        border: none;
+        color: $modBlue;
+        font-weight: 700;
+        background-color: rgba(0, 0, 0, 0);
+        img {
+            margin-right: 7px;
+        }
+    }
+    .edit,
+    .delete {
+        font-weight: 700;
+        img {
+            margin-right: 7px;
+        }
+    }
+    .edit {
+        color: $modBlue;
+    }
+    .delete {
+        color: $red;
+    }
+
+}
+//wrapper
+.buttons {
+    justify-content: space-between;
+}
+//component
+.replyTxt {
+    color: $greyblue;
+    margin-bottom: 15px;
+    .replyingTo {
+        color: $modBlue;
+        font-weight: 700;
+        margin-right: 5px;
+    }
+}
+//add comment component
+.add-comment {
+    textarea {
+        min-height: 150px;
+        padding: 5px;
+        font-family: inherit;
+        border-radius: 5px;
+    }
+    span {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            padding: 15px 25px;
+            font-weight: 700;
+            border: none;
+            color: $white;
+            background-color: $modBlue;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+        }
+    }
+}
