@@ -1,14 +1,15 @@
+import { createPortal } from 'react-dom';
 import { useEffect, useContext } from 'react';
 import { CommentContext } from './store/ContextProvider';
+import { getComments, getCurrUser } from './util/api';
 
 import AddComment from './components/AddComment';
 import CommentSection from './components/CommentSection';
-import { getComments, getCurrUser } from './util/api';
+import Warning from './components/ui/Warning';
 
 
 function App() {
-
-	const { setComments, setUser, currUser } = useContext(CommentContext);
+	const { setComments, setUser, currUser, warning, setWarning } = useContext(CommentContext);
 
 	const loadUser = async () => {
 		await getCurrUser()
@@ -26,14 +27,25 @@ function App() {
 	};
 
 	useEffect(() => {
+		if (warning) document.body.style.overflow = 'hidden';
+		else {
+			document.body.style.overflow = 'scroll';
+		}
+	}, [warning]);
+
+
+	useEffect(() => {
 		loadData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-
 	return (
 		currUser !== undefined && (
 			<main>
+				{warning && createPortal(
+					<Warning onClose={() => setWarning(false)} />,
+					document.body
+				)}
 				<CommentSection />
 				<AddComment />
 			</main>
