@@ -12,9 +12,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,16 +24,14 @@ Users should be able to:
 
 ### Screenshot
 
-![Screen capture of a white background, a blue box is centered and displays the results of a ficticious exam](./assets/images/screenshot.png)
+[Screenshot](./assets/images/screenshot.png)
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/alleycaaat/frontend-mentor/tree/main/results-summary)
-- Live Site URL: [Netlify](https://achulslander-results-summary.netlify.app)
+- Solution URL: [Github](https://github.com/alleycaaat/result-summary-component)
+- Live Site URL: [Netlify](https://achulslander-result-summary-component.netlify.app)
 
-### My process
-
-Look at the example, remember I can have a hard time distinguishing colors.  Ope.  Start coding, get annoyed at static coding HTML, know there's a better way to do this but carry on the way we're going.  Finish, celebrate our ...success?
+## My process
 
 ### Built with
 
@@ -53,13 +48,7 @@ Look at the example, remember I can have a hard time distinguishing colors.  Ope
 
 - Website - [AC Hulslander](https://www.achulslander.com/)
 - Frontend Mentor - [@alleycaaat](https://www.frontendmentor.io/profile/alleycaaat)
-- GitHub - [@alleycaaat](https://github.com/alleycaaat/)
+- Github - [@alleycaaat](https://github.com/alleycaaat/)
 - codepen - [@alleycaaat](https://codepen.io/alleycaaat)
-- Hashnode - [@alleycaaat](https://hashnode.com/@alleycaaat)
-- Discord - [alleycaaat#0802](https://discordapp.com/users/427569685366833174)
-- Twitter - [@achulslander](https://www.twitter.com/achulslander)
-- Blog - [blog.achulslander.com](https://blog.achulslander.com/)
-
-## Acknowledgments
-
-I acknowledge I haven't made anything in strictly HTML and SCSS in ages, I forgot how annoying static coding can be.  It's pretty clunky overall, but given the short amount of time I invested, and that I've been focusing on frameworks and libraries lately, it's unsurprising.
+- Blog - [@alleycaaat](https://blog-achulslander.com/)
+- Twitter - [@alleycaaat](https://www.twitter.com/alleycaaat)
