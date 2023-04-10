@@ -12,24 +12,30 @@ function App() {
 	const { setComments, setUser, currUser, warning, setWarning } = useContext(CommentContext);
 
 	const loadUser = async () => {
-		await getCurrUser()
-			.then((data) =>
-				setUser(data))
-			.catch(error => console.log('getting user error:', error));
+		try {
+			const response = await getCurrUser();
+			setUser(response);
+		}
+		catch (error) { console.log('getting user error:', error); };
 	};
 
+	//get the comments, sort them by score
 	const loadData = async () => {
-		await getComments()
-			.then((data) =>
-				setComments(data));
-		loadUser()
-			.catch(error => console.log('get comments error:', error));
+		try {
+			const data = await getComments();
+			const sortComments = await data.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+			setComments(sortComments);
+			loadUser();
+			return;
+		}
+		catch (error) { console.log('get comments error:', error); };
 	};
 
+	// prevent background scroll when the modal is open
 	useEffect(() => {
 		if (warning) document.body.style.overflow = 'hidden';
 		else {
-			document.body.style.overflow = 'scroll';
+			document.body.style.overflowY = 'scroll';
 		}
 	}, [warning]);
 

@@ -12,7 +12,8 @@ $white: hsl(0, 0%, 100%);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
+
 }
 html {
     font-family: 'Rubik', sans-serif;
@@ -20,7 +21,7 @@ html {
 }
 body {
     min-height: 100vh;
-    width: 100%;
+    background-color: $vLightGrey;
     display: flex;
     flex-direction: column;
 }
@@ -33,29 +34,48 @@ body {
 button {
     cursor: pointer;
 }
+form button {
+    &:hover {
+        background-color: $lightGreyBlue;
+    }
+}
+.scoreBtn {
+    fill: $lightGreyBlue;
+    &:hover {
+        fill: $modBlue;
+    }
+}
+.largescreenInfo,
+.largescreenScore {
+    display: none;
+}
 main {
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 100%;
     justify-content: center;
     background-color: $vLightGrey;
+    margin: 0 auto;
+    padding: 0 50px;
+    max-width: 950px;
 }
 .commentSection,
 .comment,
-.add-comment {
+.add-comment,
+.reply {
     display: flex;
     flex-direction: column;
 }
 //wrappers
 .comment,
 .reply,
-.add-comment {
+.add-comment,
+.edit-comment {
     background-color: $white;
     padding: 13px;
     border-radius: 5px;
     margin: 15px;
-    .info {
+    .smallscreenInfo {
         align-items: center;
         margin-bottom: 10px;
         p {
@@ -89,12 +109,19 @@ main {
         margin-bottom: 0;
     }
 }
-.info,
+.smallscreenInfo,
 .buttons,
 .score,
 .replyTxt {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.smallscreenInfo,
+.buttons,
+.score,
+.replyTxt {
     //wraps score and buttons
     .score {
         align-items: center;
@@ -114,38 +141,47 @@ main {
     }
     //buttons
     .scoreBtn,
+    .editbuttons,
     .edit,
     .delete {
         padding: 5px;
         border: none;
         margin: 5px;
-        //TODO vertically center the minus svg
         background-color: rgba(0, 0, 0, 0);
     }
     .replyBtn {
         padding: 7px;
         border: none;
-        color: $modBlue;
         font-weight: 700;
         background-color: rgba(0, 0, 0, 0);
-        img {
-            margin-right: 7px;
+        svg {
+            margin-right: 3px;
         }
     }
     .edit,
     .delete {
         font-weight: 700;
-        img {
-            margin-right: 7px;
+        svg {
+            margin-right: 3px;
         }
     }
-    .edit {
+    .edit,
+    .replyBtn {
         color: $modBlue;
+        fill: $modBlue;
+        &:hover {
+            color: $lightGreyBlue;
+            fill: $lightGreyBlue;
+        }
     }
     .delete {
         color: $red;
+        fill: $red;
+        &:hover {
+            color: $lightRed;
+            fill: $lightRed;
+        }
     }
-
 }
 //wrapper
 .buttons {
@@ -162,7 +198,8 @@ main {
     }
 }
 //add comment component
-.add-comment {
+.add-comment,
+.edit-comment {
     textarea {
         min-height: 150px;
         padding: 5px;
@@ -174,15 +211,104 @@ main {
         margin-top: 15px;
         align-items: center;
         justify-content: space-between;
-        button {
-            padding: 15px 25px;
-            font-weight: 700;
-            border: none;
-            color: $white;
-            background-color: $modBlue;
-            border-radius: 5px;
-            text-transform: uppercase;
+    }
+    button {
+        padding: 15px 25px;
+        font-weight: 700;
+        border: none;
+        color: $white;
+        background-color: $modBlue;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+}
+.edit-comment {
+    display: flex;
+    flex-direction: column;
+    button {
+        margin-top: 15px;
+        margin-left: auto;
+    }
+}
 
+.warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    .warningtxt {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        background-color: $white;
+        margin: auto;
+        width: 350px;
+        max-height: 250px;
+        padding: 23px;
+        color: $darkBlue;
+        span {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 11px;
+        }
+        button {
+            color: $white;
+            border: none;
+            padding: 5px 11px;
+            border-radius: 5px;
+        }
+        .cancelWarning {
+            background-color: $greyblue;
+            &:hover {
+                background-color: $darkBlue;
+            }
+        }
+        .confirmWarning {
+            background-color: $red;
+            &:hover {
+                background-color: $lightRed;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .comment,
+    .reply {
+        flex-direction: row;
+    }
+    .smallscreenScore {
+        width: 100%;
+        .buttons {
+            display: none;
+        }
+    }
+    .smallscreenButtons {
+        display: none;
+    }
+    .largescreenInfo {
+        display: flex;
+        margin-left: auto;
+    }
+    .largescreenScore {
+        display: flex;
+        justify-content: left;
+        .buttons {
+            align-items: flex-start;
+        }
+        .score {
+            display: flex;
+            flex-direction: column;
+            margin: 0 15px 3px 0 !important;
+            height: auto;
         }
     }
 }

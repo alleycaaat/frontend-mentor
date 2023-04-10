@@ -3,20 +3,24 @@ import { CommentContext } from '../store/ContextProvider';
 
 import Comment from './CommentCard/Comment';
 
+// ***
+// ** only send parent comment data to Comment component
+// ***
+
 const CommentSection = () => {
     const { comments } = useContext(CommentContext);
 
     const displaycomments = comments.map((data, i) => (
-        <>
+        <div key={i}>
             {data.parent_id === '' && (
                 <Comment
                     key={i}
                     id={data.id}
-                    comments={data}
+                    comment={data}
                     user={data.user}
                 />
             )}
-        </>
+        </div>
     ));
 
     return (

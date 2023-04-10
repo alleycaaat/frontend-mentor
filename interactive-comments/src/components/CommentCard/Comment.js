@@ -13,11 +13,12 @@ import Reply from '../Reply/Reply';
 import Info from './Info';
 
 // ***
-// ** only display parent comments
+// ** only displaying parent comments, determine if replies present
+// ** allow ability a reply directly to a parent comment
 // ***
 
 const Comment = ({ comment, user, id }) => {
-    const { currUser, editing } = useContext(CommentContext);
+    const { currUser, editing, currComment } = useContext(CommentContext);
     const { createdAt, score, content } = comment;
     const { username } = user;
     const isCurrUser = currUser.username === user.username;
@@ -29,28 +30,47 @@ const Comment = ({ comment, user, id }) => {
 
     // eslint-disable-next-line no-unused-vars
     const { replying, comment_id } = isReplying;
+
+    //determine if there are replies to the parent
     const replies = FindReplies(id);
+
+    //format the date to show time elapsed since posting
     let date = formatDate(createdAt);
 
     return (
         <>
-            {editing ? <Edit id={id} currComment={comment} />
-                : (
-                    <div className='comment'>
-                        <Info
-                            user={user}
-                            createdAt={date}
-                            isCurrUser={isCurrUser}
-                        />
-                        <CommentTxt>{content}</CommentTxt>
-                        <Score
+            <div className='comment' key={id}>
+                <div className='largescreenScore'>
+                    <Score
+                        id={id}
+                        score={score}
+                        isCurrUser={isCurrUser}
+                        setIsReplying={setIsReplying}
+                    />
+                </div>
+                <div className='smallscreenScore'>
+                    <Info
+                        id={id}
+                        user={user}
+                        createdAt={date}
+                        isCurrUser={isCurrUser}
+                        setIsReplying={setIsReplying}
+                    />
+                    {editing && id === currComment
+                        ? <Edit
                             id={id}
-                            score={score}
-                            isCurrUser={isCurrUser}
-                            setIsReplying={setIsReplying}
+                            editCmnt={comment}
                         />
-                    </div>
-                )}
+                        : <CommentTxt>{content}</CommentTxt>
+                    }
+                    <Score
+                        id={id}
+                        score={score}
+                        isCurrUser={isCurrUser}
+                        setIsReplying={setIsReplying}
+                    />
+                </div>
+            </div>
             {replying &&
                 <AddReply
                     parent={id}
