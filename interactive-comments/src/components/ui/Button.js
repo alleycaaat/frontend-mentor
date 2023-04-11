@@ -3,7 +3,6 @@ const Button = ({ className, alt, children, onClick }) => {
 		<button
 			className={className}
 			onClick={onClick}
-			alt={alt}
 		>
 			{children}
 		</button>

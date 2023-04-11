@@ -24,7 +24,7 @@ const ScoreCard = ({ score, id }) => {
             <Button
                 onClick={() => ModScore('plus')}
                 className='scoreBtn'
-                alt='plus icon'
+                aria-label='increase score'
             >
                 <PlusIcon />
             </Button>
@@ -32,7 +32,7 @@ const ScoreCard = ({ score, id }) => {
             <Button
                 onClick={() => ModScore('minus')}
                 className='scoreBtn'
-                alt='minus icon'
+                aria-label='decrease score'
             >
                 <MinusIcon />
             </Button>

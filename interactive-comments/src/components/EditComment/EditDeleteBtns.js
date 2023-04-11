@@ -23,7 +23,7 @@ const EditDeleteBtns = ({ id }) => {
                 <Button
                     onClick={deleteHandler}
                     className='delete'
-                    alt='delete icon'
+                    aria-label='delete comment'
                 >
                     <DeleteIcon />{' '}Delete
                 </Button>
@@ -31,7 +31,7 @@ const EditDeleteBtns = ({ id }) => {
                 <Button
                     onClick={editHandler}
                     className='edit'
-                    alt='edit icon'
+                    aria-label='edit comment'
                 >
                     <EditIcon />{' '}Edit
                 </Button>
