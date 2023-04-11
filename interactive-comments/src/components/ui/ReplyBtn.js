@@ -7,7 +7,7 @@ const ReplyBtn = ({ setIsReplying, id }) => {
         <Button
             className='replyBtn'
             image={reply}
-            alt='reply icon'
+            aria-label='reply button'
             onClick={() => setIsReplying({ replying: true, comment_id: id })}
         >
             <ReplyIcon />
