@@ -26,6 +26,7 @@ const ScoreCard = ({ score, id }) => {
                 className='scoreBtn'
                 aria-label='increase score'
             >
+                <span className='visually-hidden'>Increase the comment score</span>
                 <PlusIcon />
             </Button>
             <p>{score}</p>
@@ -34,6 +35,7 @@ const ScoreCard = ({ score, id }) => {
                 className='scoreBtn'
                 aria-label='decrease score'
             >
+                <span className='visually-hidden'>Decrease the comment score</span>
                 <MinusIcon />
             </Button>
         </div>

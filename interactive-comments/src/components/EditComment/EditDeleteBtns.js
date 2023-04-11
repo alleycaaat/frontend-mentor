@@ -19,23 +19,21 @@ const EditDeleteBtns = ({ id }) => {
 
     return (
         <div className='editbuttons'>
-            <span>
-                <Button
-                    onClick={deleteHandler}
-                    className='delete'
-                    aria-label='delete comment'
-                >
-                    <DeleteIcon />{' '}Delete
-                </Button>
+            <Button
+                onClick={deleteHandler}
+                className='delete'
+                aria-label='delete comment'
+            >
+                <DeleteIcon />{' '}Delete
+            </Button>
 
-                <Button
-                    onClick={editHandler}
-                    className='edit'
-                    aria-label='edit comment'
-                >
-                    <EditIcon />{' '}Edit
-                </Button>
-            </span>
+            <Button
+                onClick={editHandler}
+                className='edit'
+                aria-label='edit comment'
+            >
+                <EditIcon />{' '}Edit
+            </Button>
         </div>
     );
 };
