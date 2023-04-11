@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/alleycaaat/frontend-mentor/tree/main/notifications-page)
-- Live Site URL: [Add live site URL here](https://achulslander-notifications-page.netlify.app/)
+- Live Site URL: [Netlify](https://achulslander-notifications-page.netlify.app/)
 
 ## My process
 
