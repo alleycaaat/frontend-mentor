@@ -12,13 +12,13 @@ const Score = ({ score, isCurrUser, id, setIsReplying }) => {
     return (
         <div className='buttons'>
             <ScoreCard id={id} score={score} />
-                <span className='smallscreenButtons'>
-            {isCurrUser ? (
-                <EditDeleteBtns id={id} />
-            ) :
-                <ReplyBtn id={id} score={score} setIsReplying={setIsReplying} />
+            <div className='smallscreenButtons'>
+                {isCurrUser ? (
+                    <EditDeleteBtns id={id} />
+                ) :
+                    <ReplyBtn id={id} score={score} setIsReplying={setIsReplying} />
                 }
-            </span>
+            </div>
         </div>
     );
 };

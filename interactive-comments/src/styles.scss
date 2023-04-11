@@ -221,7 +221,7 @@ main {
         font-family: inherit;
         border-radius: 5px;
     }
-    span {
+    >div {
         display: flex;
         margin-top: 15px;
         align-items: center;
@@ -268,7 +268,7 @@ main {
         max-height: 250px;
         padding: 23px;
         color: $darkBlue;
-        span {
+        .buttonWrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;

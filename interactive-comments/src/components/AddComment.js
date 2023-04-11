@@ -41,10 +41,10 @@ const AddComment = () => {
 				value={newComment}
 				onChange={(e) => { setNewComment(e.target.value); }}
 			/>
-			<span>
+			<div>
 				<img src={currUser.image.png} alt={`${ currUser.userName } icon`} />
 				<button>Send</button>
-			</span>
+			</div>
 		</form>
 	);
 };

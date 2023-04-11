@@ -53,7 +53,7 @@ const Warning = () => {
             <div className='warningtxt'>
                 <h2 id='dialog_label' className='dialog_label'>Delete comment</h2>
                 <p id='dialog_desc' className='dialog_desc'>Are you sure you wish to delete this comment?  This will remove the comment and cannot be undone.</p>
-                <span>
+                <div className='buttonWrapper'>
                     <Button
                         className='cancelWarning'
                         onClick={cancel}
@@ -66,7 +66,7 @@ const Warning = () => {
                     >
                         Yes, Delete
                     </Button>
-                </span>
+                </div>
             </div>
         </div>
     );
