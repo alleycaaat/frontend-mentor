@@ -1,6 +1,6 @@
-# Frontend Mentor - Job listings with filtering solution
+# Frontend Mentor - Interactive comments section solution
 
-This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Interactive comments section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/alleycaaat/frontend-mentor/tree/main/job-listings)
-- Live Site URL: [Netlify](https://achulslander-job-listings.netlify.app/)
+- Solution URL: [Github](https://github.com/alleycaaat/frontend-mentor/tree/main/interactive-comments)
+- Live Site URL: [Netlify](https://achulslander-interactive-comments.netlify.app/)
 
 ### Built with
 
