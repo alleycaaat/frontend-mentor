@@ -20,7 +20,7 @@ const ScoreCard = ({ score, id }) => {
     };
 
     return (
-        <span className='score'>
+        <div className='score'>
             <Button
                 onClick={() => ModScore('plus')}
                 className='scoreBtn'
@@ -36,7 +36,7 @@ const ScoreCard = ({ score, id }) => {
             >
                 <MinusIcon />
             </Button>
-        </span>
+        </div>
     );
 };
 
