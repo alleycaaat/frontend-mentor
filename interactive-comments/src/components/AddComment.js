@@ -15,6 +15,7 @@ const AddComment = () => {
 		if (value.length > 0) {
 			const date = new Date();
 			const data = {
+				id: Math.random(),
 				content: value,
 				createdAt: date,
 				replyingTo: '',
@@ -23,9 +24,13 @@ const AddComment = () => {
 				parent_id: '',
 			};
 
-			const saved = await saveNewComment(data);
+			// ***
+			// ** saved makes an api call to the server to save the new comment and returns the comment with the fauna id
 
-			addComment(saved);
+			//const saved = await saveNewComment(data);
+
+			//addComment(saved);
+			addComment(data);
 			setNewComment('');
 		}
 	};

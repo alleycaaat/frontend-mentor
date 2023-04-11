@@ -26,11 +26,12 @@ const Reply = ({ parent }) => {
 
     const { replying, comment_id } = isReplying;
     const replies = FindReplies(parent);
+    // ***
+    // **sort replies by date
+    // ** commented out because it throws an error without database access
+    //const sortReplies = replies?.sort((a, b) => a.createdAt.localeCompare(b.createdAt));
 
-    //sort replies by date
-    const sortReplies = replies?.sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-
-    const replyComments = (sortReplies?.map((reply, i) => (
+    const replyComments = (replies?.map((reply, i) => (
         <div key={i}>
             <div
                 className='reply'

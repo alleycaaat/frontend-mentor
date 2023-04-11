@@ -1,15 +1,17 @@
 import { createPortal } from 'react-dom';
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { CommentContext } from './store/ContextProvider';
 import { getComments, getCurrUser } from './util/api';
 
 import AddComment from './components/AddComment';
 import CommentSection from './components/CommentSection';
 import Warning from './components/ui/Warning';
+import Loading from './components/loading';
 
 
 function App() {
 	const { setComments, setUser, currUser, warning, setWarning } = useContext(CommentContext);
+const [loading, setLoading]=useState(true)
 
 	const loadUser = async () => {
 		try {
@@ -17,6 +19,7 @@ function App() {
 			setUser(response);
 		}
 		catch (error) { console.log('getting user error:', error); };
+		setLoading(false)
 	};
 
 	//get the comments, sort them by score
@@ -46,16 +49,20 @@ function App() {
 	}, []);
 
 	return (
-		currUser !== undefined && (
-			<main>
-				{warning && createPortal(
-					<Warning onClose={() => setWarning(false)} />,
-					document.body
-				)}
-				<CommentSection />
-				<AddComment />
-			</main>
-		)
+<>
+		{loading && <Loading />}
+			{currUser !== undefined && (
+				<main>
+					{warning && createPortal(
+						<Warning onClose={() => setWarning(false)} />,
+						document.body
+					)}
+					<CommentSection />
+					<AddComment />
+				</main>
+			)
+			}
+		</>
 	);
 }
 

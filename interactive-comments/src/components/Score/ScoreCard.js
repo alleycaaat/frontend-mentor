@@ -14,7 +14,9 @@ const ScoreCard = ({ score, id }) => {
         const update = AdjustScore(comments, id, direction);
 
         modComment(id, update);
-        editComment(id, update);
+        // ***
+        // ** editComment is an api call
+        //editComment(id, update);
     };
 
     return (

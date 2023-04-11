@@ -23,10 +23,12 @@ export const AddReply = ({ parent, setIsReplying, replyingTo }) => {
                 parent_id: parent,
             };
 
+            // ***
+            // ** saveNewComment is an api call
+            //saveNewComment(data);
             addComment(data);
-            saveNewComment(data);
             setNewComment('');
-            setIsReplying({replying: false, comment_id: ''})
+            setIsReplying({ replying: false, comment_id: '' });
         }
     };
 

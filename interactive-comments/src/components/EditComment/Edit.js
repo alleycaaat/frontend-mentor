@@ -23,7 +23,9 @@ export const Edit = ({ id, editCmnt }) => {
             };
 
             try {
-                editComment(id, data);
+                // ***
+                // ** editComment is an api call
+                //editComment(id, data);
                 modComment(id, data);
                 setEditing(false);
             } catch (error) {

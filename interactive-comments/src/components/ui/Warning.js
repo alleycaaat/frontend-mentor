@@ -21,8 +21,10 @@ const Warning = () => {
     };
 
     const confirm = () => {
+        // ***
+        // ** eraseComment is an api call
+        //eraseComment(currComment);
         deleteComment(currComment);
-        eraseComment(currComment);
         setWarning(false, '');
     };
 

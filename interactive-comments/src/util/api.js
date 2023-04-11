@@ -42,6 +42,7 @@ const getCurrUser = async () => {
 };
 
 const saveNewComment = async (data) => {
+    console.log('data:', data);
     try {
         const response = await fetch('/.netlify/functions/createComment', {
             body: JSON.stringify(data),
