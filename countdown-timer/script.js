@@ -1,4 +1,5 @@
-const countdown = new Date(Date.parse(new Date()) + 8 * 24 * 60 * 60 * 1000);
+const countdown = new Date(Date.parse(new Date()) + 14 * 24 * 60 * 60 * 1000);
+
 const days = document.querySelector('.days').querySelector('.flip-card');
 const hours = document.querySelector('.hours').querySelector('.flip-card');
 const minutes = document.querySelector('.minutes').querySelector('.flip-card');
@@ -41,11 +42,12 @@ function initializeClock(countdown) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
-const addFlip = (card, t) => {
+const addFlip = (card, time) => {
     // ** confirm time has changed
     const currTime = card.querySelector('.top-half').innerText;
-    if (t == currTime) return;
+    if (time == currTime) return;
 
+    let t = time <= 9 ? `0${ time }` : time;
     const topHalf = card.querySelector('.top-half');
     const bottomHalf = card.querySelector('.bottom-half');
     const topFlip = document.createElement('div');
@@ -61,11 +63,13 @@ const addFlip = (card, t) => {
     topFlip.addEventListener('animationstart', () => {
         topHalf.innerText = t;
     });
+
     // ** animation ends, remove animated div, update bottom animation to new time
     topFlip.addEventListener('animationend', () => {
         topFlip.remove();
         bottomFlip.innerText = t;
     });
+
     // ** animation ends, update bottom-half to new time, remove animated div
     bottomFlip.addEventListener('animationend', () => {
         bottomHalf.innerText = t;
@@ -75,5 +79,6 @@ const addFlip = (card, t) => {
     card.appendChild(topFlip);
     card.appendChild(bottomFlip);
 };
+
 
 initializeClock(countdown);
