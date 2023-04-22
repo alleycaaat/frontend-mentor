@@ -71,3 +71,10 @@ These are the projects I've completed on [frontendmentor](https://www.frontendme
 [Visit site](https://achulslander-interactive-comments.netlify.app/)
 
 ![a comment section with the option to change the score on a comment and reply to comments](./assets/comments-ss.png)
+
+## Launch countdown timer
+#### HTML5, SCSS, JavaScript
+
+[Visit site](https://achulslander-countdown-timer.netlify.app/)
+
+![a headline of 'we're launching soon' that has a countdown timer below it countingn down from 14 days](./assets/countdown-ss.png)
