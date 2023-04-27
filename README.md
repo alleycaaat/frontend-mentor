@@ -78,3 +78,10 @@ These are the projects I've completed on [frontendmentor](https://www.frontendme
 [Visit site](https://achulslander-countdown-timer.netlify.app/)
 
 ![a headline of 'we're launching soon' that has a countdown timer below it countingn down from 14 days](./assets/countdown-ss.png)
+
+## rock-paper-scissors-lizard-spock
+#### HTML5, SCSS, JavaScript
+
+[Visit site](https://github.com/alleycaaat/frontend-mentor/tree/main/r-p-s-l-s)
+
+![a one person against the computer game of rock-paper-scissors-lizard-spock](./assets/r-p-s-l-s-ss.png)
