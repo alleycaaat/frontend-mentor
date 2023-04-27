@@ -156,8 +156,8 @@ button {
 	cursor: pointer;
 }
 main {
-	height: 100%;
-	min-height: 70vh;
+	height: 95%;
+	min-height: 65vh;
 }
 main .rules {
 	padding: 7px 29px;
@@ -212,7 +212,7 @@ main .rules {
 	max-width: 375px;
 	height: 100%;
 	min-height: 350px;
-	margin: 15px auto;
+	margin: 0 auto;
 	background: url(./images/bg-pentagon.svg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -267,7 +267,7 @@ main .rules {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	width: 70%;
-	margin: 15px auto;
+	margin: 0 auto;
 	max-width: 350px;
 }
 #game-play p {
@@ -312,7 +312,7 @@ main .rules {
 	padding: 10px 35px;
 	color: hsl(229, 25%, 31%);
 	font-weight: 700;
-	margin: 15px auto 0 auto;
+	margin: 10px auto 0 auto;
 }
 .winning-marker {
 	animation: baby-glow ease-in 0.5s forwards;
@@ -330,7 +330,7 @@ footer {
 	color: hsl(217, 16%, 45%);
 	letter-spacing: 2px;
 	text-align: center;
-	margin: 5px 25px;
+	margin: 0px 25px;
 	text-transform: lowercase;
 }
 footer a {
