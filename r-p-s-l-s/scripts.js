@@ -143,22 +143,22 @@ const handleClick = (e) => {
     }
 };
 
-// ** build the marker buttons: create a button, nested div to show the icon;
+// ** build the marker buttons: create a button, nested span to show the icon;
 const buildMarker = (markerName) => {
     let marker = document.createElement('button');
-    const markerDiv = document.createElement('div');
+    const markerSpan = document.createElement('span');
     const icon = document.createElement('img');
 
     marker.setAttribute('class', `wrap-marker ${ markerName }`);
     marker.value = `${ markerName }`;
 
-    markerDiv.setAttribute('class', 'marker');
+    markerSpan.setAttribute('class', 'marker');
 
     icon.src = `./images/icon-${ markerName }.svg`;
     icon.alt = `${ markerName } icon`;
 
-    markerDiv.append(icon);
-    marker.append(markerDiv);
+    markerSpan.append(icon);
+    marker.append(markerSpan);
 
     return marker;
 };
