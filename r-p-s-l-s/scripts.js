@@ -11,9 +11,9 @@ const playing = document.querySelector('#game-play');
 const beginning = document.querySelector('#start-game');
 
 // ** track the game score
-let count = 0,
-    winner = '';
-score.innerText = count;
+let points = 0;
+
+score.innerText = points;
 
 const markerOptions = [
     'scissors',
@@ -23,63 +23,62 @@ const markerOptions = [
     'rock'
 ];
 
-//TODO need to increase marker size on game-play page
+
 const drawGame = () => {
     showWinner.innerText = 'It`s a draw';
     end.classList.toggle('hidden');
 };
 
-const displayWinner = (user, house) => {
-    if (user === house) {
+const determineWinner = (usr, hse) => {
+    // ** usr = user's selection hse = dr. house's selection
+    if (usr === hse) {
         return drawGame();
     }
-    let temp = count;
+    let temp = points;
 
     const check = (first, second) => {
-        return (house === first || house === second);
+        return (hse === first || hse === second);
     };
 
     switch (true) {
-        case (user === 'paper'):
-            check('lizard', 'scissors') ? count-- : count++;
-            //(house === 'lizard' || house === 'scissors')
-
+        case (usr === 'paper'):
+            check('lizard', 'scissors') ? points-- : points++;
             break;
-        case (user === 'rock'):
-            check('paper', 'spock') ? count-- : count++;
-            // (house === 'paper' || house === 'spock')
+        case (usr === 'rock'):
+            check('paper', 'spock') ? points-- : points++;
             break;
-        case (user === 'lizard'):
-            check('rock', 'scissors') ? count-- : count++;
-            //(house === 'rock' || house === 'scissors') ? count-- : count++;
+        case (usr === 'lizard'):
+            check('rock', 'scissors') ? points-- : points++;
             break;
-        case (user === 'spock'):
-            check('lizard', 'paper') ? count-- : count++;
-            //(house === 'lizard' || house === 'paper') ? count-- : count++;
+        case (usr === 'spock'):
+            check('lizard', 'paper') ? points-- : points++;
             break;
-        case (user === 'scissors'):
-            check('spock', 'rock') ? count-- : count++;
-            //(house === 'spock' || house === 'rock') ? count-- : count++;
+        case (usr === 'scissors'):
+            check('spock', 'rock') ? points-- : points++;
             break;
         default:
             return;
     }
 
-    // ** prevent score from going negative, display the score
-    if (count <= -1) count = 0;
-    score.innerText = count;
+    // ** prevent score from going negative
+    if (points <= -1) points = 0;
+    score.innerText = points;
 
-    count <= temp ? glowWinner('house') : glowWinner('user');
+    // ** need to remove .reveal before adding .winning-marker
+    setTimeout(function () {
+        house.classList.remove('reveal');
+        points <= temp ? glowWinner('house') : glowWinner('house');
+    }, 500);
 
 };
 const glowWinner = (winner) => {
-    console.log('WINER:', winner);
     let button = document.querySelector(`#${ winner }`);
     end.classList.toggle('hidden');
-	
-    winner == 'house' ? showWinner.innerText = 'The house wins!' : showWinner.innerText = 'You win!';
+
     button.classList.add('winning-marker');
+    winner == 'house' ? showWinner.innerText = 'House wins!' : showWinner.innerText = 'You win!';
 };
+
 
 // ** dr. house makes his choice
 const housePick = (val) => {
@@ -87,10 +86,14 @@ const housePick = (val) => {
         pick = markerOptions[random];
     let button = buildMarker(pick);
 
-    button.classList.add('no-touchy');
-    button.classList.add('show-marker');
+    button.classList.add('no-touchy', 'show-marker');
+    house.classList.add('reveal');
+
     house.appendChild(button);
-    displayWinner(val, pick);
+
+    setTimeout(function () {
+        determineWinner(val, pick);
+    }, 2100);
 };
 
 // ** user makes their choice
@@ -100,15 +103,20 @@ const userPick = (val) => {
     beginning.classList.toggle('hidden');
     playing.classList.remove('hidden');
 
-    marker.classList.add('no-touchy');
+    marker.classList.add('no-touchy', 'show-marker');
     marker.classList.add('show-marker');
     user.appendChild(marker);
+
     housePick(val);
 };
+
+// ** reset the selections, must set innerHTML to empty or the selections will stack up
 const resetProps = (div) => {
     div.innerHTML = null;
     div.classList.remove('winning-marker');
 };
+
+// ** wipe things clean for a new game
 const newGame = () => {
     end.classList.toggle('hidden');
     playing.classList.add('hidden');
@@ -170,3 +178,4 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(btn => {
     btn.addEventListener('click', handleClick);
 })
+//console.log('build marker:', rowone);

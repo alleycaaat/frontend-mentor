@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+		<link rel='icon' type='image/png' sizes='32x32'
+			href='./images/favicon-32x32.png'>
+
+		<link rel='preconnect' href='https://fonts.googleapis.com'>
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+		<link
+			href='https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap'
+			rel='stylesheet'>
+
+		<link rel='stylesheet' href='styles.css'>
+		<script src='scripts.js' defer></script>
+		<title>Rock, Paper, Scissors, Lizard, Spock - AC Hulslander</title>
+	</head>
+	<body>
+		<header>
+			<div class='title'>
+				<p>Rock</p>
+				<p>Paper</p>
+				<p>Scissors</p>
+				<p>Lizard</p>
+				<p>Spock</p>
+			</div>
+			<div class='score'>
+				<p>Score</p>
+				<p class='score-card'></p>
+			</div>
+		</header>
+
+		<main>
+
+			<!-- javascript will build the board here -->
+			<div id='start-game'>
+				<div class='row one'>
+				</div>
+				<div class='row two'>
+				</div>
+				<div class='row three'>
+				</div>
+			</div>
+
+			<!-- rules, hidden initially -->
+			<div id='rules' class='hidden'>
+				<!-- large screen rules -->
+				<div class='lg-rules'>
+					<div class='top'>
+						<h3>Rules</h3>
+						<button value='close'>
+							<img src='./images/icon-close.svg' alt='close the rules'>
+						</button>
+					</div>
+					<img src='./images/image-rules-bonus.svg' alt='a graphic describing the
+						rules of the game' aria-hidden='true'>
+				</div>
+				<!-- small screen rules -->
+				<div class="sm-rules">
+					<h3>Rules</h3>
+					<img src='./images/image-rules-bonus.svg' alt='a graphic describing the
+						rules of the game' aria-hidden='true'>
+					<button value='close'>
+						<img src='./images/icon-close.svg' alt='close the rules'>
+					</button>
+				</div>
+
+				<div class='sr-only'>
+					<p>
+						If you win, you gain one point. If the house wins, you lose one
+						point.
+					</p>
+					<ul>
+						<li> Scissors beats Paper </li>
+						<li> Paper beats Rock </li>
+						<li> Rock beats Lizard </li>
+						<li> Lizard beats Spock </li>
+						<li> Spock beats Scissors </li>
+						<li> Scissors beats Lizard </li>
+						<li> Paper beats Spock </li>
+						<li> Rock beats Scissors </li>
+						<li> Lizard beats Paper </li>
+						<li> Spock beats Rock </li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!-- holds the markers the players choose, initially hidden -->
+			<div id='game-play' class='hidden'>
+
+				<!-- user's selection -->
+				<div class='playing-wrapper'>
+					<div id='user'>
+					</div>
+					<p>You picked</p>
+				</div>
+
+				<!-- dr. house's selection -->
+				<div class='playing-wrapper dr'>
+					<div id='house'>
+					</div>
+					<p>house picked</p>
+				</div>
+
+				<!-- results of the round, initially hidden -->
+				<div class='results hidden'>
+					<h1></h1>
+					<button class='play-again' value='play again'>Play again</button>
+				</div>
+
+			</div>
+
+			<button class='rules' value='rules'>Rules</button>
+		</main>
+
+		<footer>
+			<p>
+				Challenge by <a href='https://www.frontendmentor.io?ref=challenge'
+					target='_blank'>Frontend Mentor</a>.
+			</p>
+			<p>
+				Coded by <a href='https://www.achulslander.com/' target='_blank'>AC Hulslander</a>.
+			</p>
+			<p>
+				<a href='https://www.youtube.com/watch?v=iSHPVCBsnLw' target='_blank'>For laughs</a>
+			</p>
+		</footer>
+
+	</body>
+</html>
