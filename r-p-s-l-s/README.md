@@ -32,6 +32,7 @@ Users should be able to:
 
 - Solution URL: [Github](https://github.com/alleycaaat/frontend-mentor/tree/main/r-p-s-l-s)
 - Live Site URL: [Vercel](https://achulslander-r-p-s-l-s.vercel.app/)
+- View the SCSS: [codepen[(https://codepen.io/alleycaaat/pen/ExdXbzv)
 
 ### Built with
 
