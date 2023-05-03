@@ -1,0 +1,136 @@
+$dmDarkBlue: hsl(209, 23%, 22%);
+$dmVDarkBlue: hsl(207, 26%, 17%);
+$vDarkBlue: hsl(200, 15%, 8%);
+$darkGrey: hsl(0, 0%, 52%);
+$vLightGrey: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    font-weight: 700;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-width: 325px;
+    height: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-color: $vLightGrey
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    font-weight: 700;
+    background-color: $white;
+    box-shadow: 0px 15px 10px -15px rgba(216, 216, 216, 0.5);
+}
+
+.search {
+    width: 90%;
+    margin: 15px;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px;
+    height: 39px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 5px rgba(216, 216, 216, 0.3);
+    button,
+    input {
+        border: none;
+        background-color: $white;
+    }
+    button {
+        padding: 5px;
+        font-size: 19px;
+        color: $darkGrey;
+    }
+}
+
+.drop-down {
+    margin: 5px auto 5px 15px;
+    padding: 11px;
+    border-radius: 3px;
+    width: 55%;
+    box-shadow: 0 0 5px 5px rgba(216, 216, 216, 0.3);
+    font-weight: 300;
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    >div {
+        position: absolute;
+        font-size: 12px;
+        width: 120px;
+        margin: 1px;
+        padding: 1px 0 1px 11px;
+        &.show {
+            background-color: $white;
+        }
+        &.hidden {
+            background-color: none;
+            display: none;
+        }
+    }
+    select {
+        width: 100%;
+        border: none;
+        padding: 2px 5px 2px 9px;
+    }
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: $white;
+    height: 250px;
+    margin: 15px;
+    .flag {
+        width: 50%;
+        height: 100%;
+    }
+    .stats {
+        margin: 15px;
+        padding-left: 15px;
+        .country {
+            font-weight: 800;
+            font-size: 15px
+        }
+        span {
+            display: flex;
+            flex-direction: row;
+            margin: 3px auto 3px 0;
+            :first-child {
+                font-weight: bold;
+            }
+        }
+    }
+}
