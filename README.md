@@ -1,6 +1,6 @@
 # frontend-mentor
 
-These are the projects I've completed on [frontendmentor](https://www.frontendmentor.io/).
+These are the projects I've completed offered from [frontendmentor](https://www.frontendmentor.io/).
 
 
 ## Product Preview Card
