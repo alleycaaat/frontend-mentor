@@ -28,6 +28,7 @@ const Dropdown = () => {
             </div>
             <label htmlFor='filter' className='hidden'>Filter by Region</label>
             <select
+                aria-label='select a region'
                 id='filter'
                 onFocus={() => setExpanded(true)}
                 onBlur={() => setExpanded(false)}
