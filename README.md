@@ -85,3 +85,10 @@ These are the projects I've completed offered from [frontendmentor](https://www.
 [Visit site](https://github.com/alleycaaat/frontend-mentor/tree/main/r-p-s-l-s)
 
 ![a one person against the computer game of rock-paper-scissors-lizard-spock](./assets/r-p-s-l-s-ss.png)
+
+## REST Countries API
+#### React, Vercel
+
+[Visit site](https://achulslander-countries-api.vercel.app/)
+
+![web-app to search for information on any country in the world](./assets/countries-ss-ukraine.png)
