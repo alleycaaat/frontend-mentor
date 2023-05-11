@@ -1,11 +1,16 @@
-import Wrapper from './components/Wrapper';
+import ThemeContextProvider from './store/theme-context';
 import CountriesContextProvider from './store/countries-context';
+import Container from './Container';
+
+import './styles.scss';
 
 function App() {
 	return (
-		<CountriesContextProvider>
-			<Wrapper />
-		</CountriesContextProvider>
+		<ThemeContextProvider>
+			<CountriesContextProvider>
+				<Container/>
+			</CountriesContextProvider>
+		</ThemeContextProvider>
 	);
 }
 
