@@ -2,7 +2,7 @@ import { Info } from '../../constants/card-info';
 
 const Card = ({ handleClick, country, val }) => {
     return (
-        <button onClick={handleClick} className='card' value={val} >
+        <div role='button' onClick={handleClick} className='card' value={val} >
             <div className='flag'
                 style={{ backgroundImage: `url(${ country.flag })` }}
                 alt={country.alt} />
@@ -13,7 +13,7 @@ const Card = ({ handleClick, country, val }) => {
                 <Info data={country?.region}>Region:</Info>
                 <Info data={country?.capital}>Capital:</Info>
             </div>
-        </button>
+        </div>
     );
 };
 
