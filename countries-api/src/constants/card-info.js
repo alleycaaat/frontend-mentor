@@ -1,10 +1,9 @@
 export const Info = ({ data, children }) => {
-
     return (
-        <span>
+        <div>
             <p>{children}</p>
             <p>{data}</p>
-        </span>
+        </div>
     );
 };
 
