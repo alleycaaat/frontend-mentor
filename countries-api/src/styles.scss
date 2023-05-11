@@ -1,0 +1,533 @@
+$dmDarkBlue: hsl(209, 23%, 22%);
+$dmVDarkBlue: hsl(207, 26%, 17%);
+$vDarkBlue: hsl(200, 15%, 8%);
+$darkGrey: hsl(0, 0%, 52%);
+$vLightGrey: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+$dark-box-shadow: 0 0 5px 5px rgba(54, 54, 54, 0.3);
+$box-shadow: 0 0 5px 5px rgba(235, 235, 235, 0.3);
+$button-shadow: 0 0 5px 3px rgba(179, 179, 179, 0.2);
+
+$dark-header-bs: 0px 15px 10px -15px rgba(50, 50, 50, 0.5);
+$header-bs: 0px 15px 10px -15px rgba(216, 216, 216, 0.5);
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+    100% {
+        background-position: 1200px 0;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#root {
+    width: 100%;
+}
+
+body {
+    font-weight: 700;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    @include column();
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    align-items: center;
+}
+
+header {
+    @include row();
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    font-weight: 700;
+    padding: 15px;
+    .color-mode {
+        svg {
+            padding-right: 5px;
+            line-height: 14px;
+            font-size: 14px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: none;
+        padding: 5px 11px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.card-wrapper {
+    min-width: 100%;
+    @include column();
+    padding: 0 15px;
+}
+
+// ** holds search bar and drop-down menu
+.option-wrap {
+    width: 90%;
+    min-width: 100%;
+    .search {
+        @include row();
+        width: 90%;
+        margin: 15px 15px 2px 15px;
+        align-items: center;
+        padding: 2px 5px;
+        border-radius: 3px;
+        button,
+        input {
+            font-size: 12px;
+            line-height: 16px;
+            border: none;
+        }
+        input {
+            width: 80%;
+        }
+        button {
+            padding: 5px;
+            font-size: 19px;
+        }
+    }
+    // ** alert message after search bar
+    .search-p {
+        text-align: center;
+        height: 13px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .drop-down {
+        margin: 15px auto 25px 15px;
+        padding: 11px;
+        border-radius: 3px;
+        width: 55%;
+        max-width: 190px;
+        font-weight: 300;
+        font-size: 12px;
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        >div {
+            position: absolute;
+            width: auto;
+            margin: 1px;
+            padding: 0 0 1px 11px;
+            &.hidden {
+                background-color: none;
+                display: none;
+            }
+        }
+        select {
+            width: 100%;
+            font-size: 12px;
+            border: none;
+            padding: 2px 5px 2px 9px;
+        }
+    }
+}
+
+.card,
+.search-card {
+    @include column();
+    width: 235px;
+    height: auto;
+    margin: 5px auto 35px auto;
+    border-radius: 5px;
+    border: none;
+    .flag {
+        width: 100%;
+        height: 190px;
+        border-radius: 5px 5px 0 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .stats {
+        height: auto;
+        width: 100%;
+        padding: 25px 0 20px 15px;
+        text-align: left;
+        line-height: 21px;
+        .country {
+            font-weight: bolder;
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+        span {
+            display: flex;
+            flex-direction: row;
+            margin: 3px auto 3px 0;
+            font-weight: 300;
+            font-size: 14px;
+            p {
+                padding-right: 3px;
+            }
+            :first-of-type {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.shimmering {
+    margin-top: 15px;
+    width: 100%;
+    @include column();
+    .card {
+        height: auto;
+        width: 235px;
+        display: flex;
+        flex-direction: column;
+        margin: 15px auto;
+        .stats {
+            width: 100%;
+            padding: 0;
+            p {
+                width: 90%;
+                height: 16px;
+                margin: 5px auto;
+            }
+        }
+    }
+}
+
+.single-country {
+    margin: 15px auto;
+    .search-card {
+        width: 90%;
+        max-width: 450px;
+        border-radius: 0px;
+        box-shadow: none;
+        margin: 45px 15px 5px 15px;
+        .flag {
+            border-radius: 0px;
+            max-width: 315px;
+        }
+        .stats {
+            padding: 15px 0px;
+            line-height: 25px;
+            .country {
+                margin: 15px 0px;
+            }
+        }
+    }
+    .borders {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 5px 0;
+        p {
+            font-size: 17px;
+            font-weight: 600;
+            width: 100%;
+        }
+        .border-button {
+            padding: 5px 15px;
+            height: auto;
+            margin: 5px 5px 5px 0;
+            border: none;
+            font-size: 12px;
+        }
+    }
+    .back-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 25px auto 25px 15px;
+        padding: 5px 11px;
+        width: 75px;
+        border: none;
+        border-radius: 1px;
+    }
+}
+
+.shimmer {
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+}
+
+.dark-mode {
+    background-color: $dmVDarkBlue;
+    min-height: 100vh;
+    height: 100%;
+    .shimmer {
+        background: linear-gradient(to right, #314251 8%, #344656 28%, #324453 33%);
+        background-size: 1200px 100%;
+    }
+    header {
+        background-color: $dmDarkBlue;
+        color: $white;
+        box-shadow: $dark-header-bs;
+        button.color-mode {
+            background-color: $dmDarkBlue;
+            color: $white;
+        }
+    }
+    .option-wrap {
+        .search {
+            background-color: $dmDarkBlue;
+            box-shadow: $dark-box-shadow;
+            button,
+            input {
+                background-color: $dmDarkBlue;
+                color: $white;
+            }
+        }
+        button {
+            color: $white;
+        }
+        .drop-down {
+            background-color: $dmDarkBlue;
+            box-shadow: $dark-box-shadow;
+            color: $white;
+            select,
+            option {
+                background-color: $dmDarkBlue;
+                color: $white;
+            }
+            >div {
+                &.show {
+                    background-color: $dmDarkBlue;
+                }
+            }
+        }
+    }
+    .card {
+        color: $white;
+        background-color: $dmDarkBlue;
+        box-shadow: $dark-box-shadow;
+        .stats {
+            background-color: $dmDarkBlue;
+        }
+    }
+    .border-button {
+        background-color: $dmDarkBlue;
+        color: $white;
+    }
+    .single-country {
+        color: $white;
+        .search-card,
+        .stats,
+        .borders {
+            background-color: $dmVDarkBlue;
+        }
+    }
+    .back-button {
+        box-shadow: $dark-box-shadow;
+        color: $white;
+        background-color: $dmDarkBlue;
+    }
+}
+
+.light-mode {
+    background-color: $vLightGrey;
+    min-height: 100vh;
+    height: 100%;
+    .shimmer {
+        background: #ddd;
+        background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+        background-size: 1200px 100%;
+    }
+    header {
+        background-color: $white;
+        box-shadow: $header-bs;
+        button.color-mode {
+            background-color: $white;
+        }
+    }
+    .option-wrap {
+        .search {
+            background-color: $white;
+            box-shadow: $box-shadow;
+            button,
+            input {
+                background-color: $white;
+                color: black;
+            }
+        }
+        button {
+            color: $white;
+        }
+        .drop-down {
+            background-color: $white;
+            box-shadow: $box-shadow;
+            >div {
+                &.show {
+                    background-color: $white
+                }
+            }
+        }
+    }
+    .card,
+    .card .stats {
+        background-color: $white;
+        box-shadow: $box-shadow;
+    }
+    .border-button,
+    .back-button {
+        color: black;
+        background-color: $white;
+        box-shadow: $box-shadow;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        padding: 15px 45px;
+    }
+    .shimmering {
+        @include row();
+        flex-wrap: wrap;
+    }
+    .option-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 100%;
+        padding: 0px 25px;
+        justify-content: space-between;
+        align-items: center;
+        .search {
+            width: 30%;
+            min-width: 250px;
+            margin: 15px 5px;
+        }
+        .drop-down {
+            min-width: 150px;
+            width: 20%;
+            margin: 15px 5px;
+        }
+    }
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0px 25px;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 35px;
+        flex-grow: 1;
+        .card {
+            width: 45%;
+            max-width: 325px;
+            .flag {
+                width: 100%;
+                height: auto;
+                min-height: 175px;
+            }
+        }
+    }
+    .single-country {
+        width: 100%;
+        padding: 15px;
+        @include column();
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 950px;
+        .search-card {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 950px;
+            .flag {
+                width: 40%;
+                max-width: 375px;
+                height: auto;
+                max-height: 210px;
+            }
+            .desktop {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                padding-left: 35px;
+                .stats {
+                    padding-top: 0;
+                    width: 50%;
+                    .country {
+                        margin: 0px;
+                    }
+                }
+            }
+            .borders {
+                padding-top: 0;
+                flex-grow: 1;
+                margin: 10px 0;
+                p {
+                    width: auto;
+                    padding-right: 15px;
+                }
+            }
+        }
+        .back-button {
+            margin: 25px auto 25px 0;
+            padding: 7px 15px;
+            height: auto;
+            flex: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .search-card {
+        .desktop {
+            padding-left: 55px !important;
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+    .search-card {
+        .desktop {
+            padding-left: 75px !important;
+        }
+    }
+}
