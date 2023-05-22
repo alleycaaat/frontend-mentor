@@ -31,6 +31,7 @@ $header-bs: 0px 15px 10px -15px rgba(216, 216, 216, 0.5);
     }
 }
 
+// ** content won't be visible on screen, but screen readers will pick it up and notify users
 .sr-only {
     border: 0 !important;
     clip: rect(1px, 1px, 1px, 1px) !important;
@@ -68,6 +69,7 @@ body {
     display: flex;
 }
 
+// ** .card is a clickable element wrapping the quick-info on a country
 button,
 .card {
     cursor: pointer;
@@ -151,7 +153,7 @@ header {
         margin: 15px auto 25px 15px;
         padding: 11px;
         border-radius: 3px;
-        width: 55%;
+        width: 60%;
         max-width: 190px;
         font-weight: 300;
         font-size: 12px;
@@ -179,6 +181,7 @@ header {
     }
 }
 
+// ** search-card is the individual country information
 .card,
 .search-card {
     @include column();
@@ -248,6 +251,7 @@ header {
     }
 }
 
+// ** wraps the clicked country
 .single-country {
     margin: 15px auto;
     .search-card {
@@ -431,6 +435,37 @@ header {
         color: black;
         background-color: $white;
         box-shadow: $box-shadow;
+    }
+}
+
+#bannerLinks {
+    width: 220px;
+    height: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    background-color: rgba(0, 0, 0, 0);
+    a {
+        transition: opacity 1s, text-transform 1s;
+        opacity: 0.3;
+        display: block;
+        background: rgb(74, 0, 105);
+        color: white;
+        text-align: center;
+        line-height: 21px;
+        height: 21px;
+        font-size: 15px;
+        text-decoration: none;
+        margin: 3px;
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        &:nth-child(2) {
+            background-color: #838383;
+        }
+        &:hover {
+            text-transform: uppercase;
+            opacity: 1;
+        }
     }
 }
 

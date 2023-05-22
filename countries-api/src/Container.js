@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from './store/theme-context';
 
-import { BsMoon } from 'react-icons/bs';
+
 import Wrapper from './components/Wrapper';
+import { Dark, Light } from './constants/header-buttons';
 
 const Container = () => {
     const { darkMode, toggleMode } = useContext(ThemeContext);
@@ -11,9 +12,10 @@ const Container = () => {
         <div className={darkMode ? 'container dark-mode' : ' container light-mode'}>
             <header className='header'>
                 <p>Where in the world?</p>
-                <button className='color-mode' onClick={toggleMode}>
-                    <BsMoon aria-hidden='true' /> Dark Mode
-                </button>
+                {darkMode
+                    ? <Light onClick={toggleMode} />
+                    : <Dark onClick={toggleMode} />
+                }
             </header>
             <Wrapper />
         </div>
